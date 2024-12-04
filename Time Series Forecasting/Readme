@@ -1,1 +1,36 @@
+Tools and techniques used
+Python Libraries:
+numpy, pandas for data manipulation.
+statsmodels for ARIMA/SARIMAX modeling.
+matplotlib, plotly for visualization.
+warnings to filter unnecessary warnings during model execution.
+Models Implemented:
+ARIMA: A statistical model used for forecasting univariate time series data.
+SARIMAX: An extension of ARIMA that includes seasonal components and exogenous variables.
 
+Overview of the Project:
+
+This project involves predicting store sales over time using statistical modeling techniques, specifically ARIMA (AutoRegressive Integrated Moving Average) and SARIMAX (Seasonal AutoRegressive Integrated Moving-Average with eXogenous factors) models. The goal is to accurately forecast future sales trends based on historical sales data, helping stakeholders in decision-making processes such as inventory management, promotional planning, and revenue forecasting.
+The dataset was loaded using pandas, followed by an exploration of the top rows to understand its structure.
+The initial steps include handling missing values, outliers, and ensuring the data is in the appropriate time-series format.
+
+Exploratory Data Analysis (EDA):
+
+Visualizations of the sales trends over time, detecting seasonality, trends, and noise in the dataset.
+Modeling Approach:
+
+ARIMA Modeling: The model captures the autoregressive and moving average components of the time series. It is tuned by specifying the order parameters (p, d, q).
+SARIMAX Modeling: An advanced version of ARIMA, this model captures seasonal patterns and can incorporate external factors (exogenous variables).
+
+Evaluation Metrics: The performance of the models was likely evaluated using metrics such as RMSE (Root Mean Square Error), MAE (Mean Absolute Error), and visual inspections of the predicted versus actual sales.
+
+Evaluation:
+Insights Gained: The models provide actionable insights into future sales trends. Understanding the sales pattern helps in making informed decisions about resource allocation and marketing.
+The project concludes with a comparison between the ARIMA and SARIMA models.
+The SARIMA model provides better results, as seen in the sales forecasting plot that compares the predicted values from both models against the actual sales.
+The SARIMA model (green line) closely follows the actual sales trend, especially capturing the seasonal peaks, whereas the ARIMA model (red line) has more deviations from the actual data.
+
+Conclusion:
+SARIMA outperforms ARIMA in terms of sales prediction accuracy.
+The inclusion of seasonality in SARIMA makes it better suited for capturing the underlying patterns in store sales data, which often have recurring seasonal peaks and trends.
+The figure clearly shows that SARIMA is the preferred model for this particular time series data due to its capability to handle seasonality.
