@@ -1,1 +1,39 @@
+Tools and techniques used
+Libraries:
+Pandas and NumPy for data manipulation.
+Sklearn for machine learning processes (CountVectorizer, Cosine Similarity).
+Algorithms:
+Cosine Similarity: This was used to measure the similarity between movies based on the bag-of-words representation of their tags.
 
+The project successfully builds a content-based movie recommender system using movie metadata.By leveraging cosine similarity on textual features such as genres, keywords, and cast, the system provides relevant movie suggestions based on the user's input.
+
+Dataset Overview:
+The project uses two datasets:
+tmdb_5000_movies.csv: Contains information about movies such as movie ID, title, genres, keywords, and overview.
+tmdb_5000_credits.csv: Contains data about the cast and crew of the movies.
+The two datasets are merged on the movie title to combine relevant information for each movie.
+
+Project Workflow:
+Data Preprocessing:
+Columns like movie_id, title, overview, genres, keywords, cast, and crew were retained.
+Missing values were removed to ensure clean data.
+The genres, keywords, cast, and crew columns were processed using Python's ast.literal_eval() to convert string representations of lists into actual Python lists.
+Only the top 3 actors from the cast and the director from the crew were retained for simplicity.
+All text data, including genres, keywords, and cast, were combined into a single 'tags' column to create a unified feature for each movie.
+Text Processing:
+The text data in the 'tags' column was further processed:
+Stopwords were removed.
+Spaces in multi-word terms were collapsed to create a more cohesive representation.
+Vectorization:
+A CountVectorizer was used to convert the processed text data into a matrix of token counts (bag-of-words model), with a limit of 5000 features and English stop words excluded.
+Similarity Calculation:
+Cosine similarity was computed between movie vectors to measure the closeness of movies based on their tags.
+
+Functionality:
+Movie Recommendation:
+A function recommend(movie) was created to recommend similar movies based on the cosine similarity score.
+The function retrieves the index of the target movie, calculates the similarity scores with all other movies, and then returns the top 5 similar movies.
+
+Recommendations:
+Expand Features: Consider incorporating additional features like movie ratings, release year, or language to improve the recommendation quality.
+Diversity in Recommendations: The system could benefit from diversity-enhancing techniques to ensure that it doesn’t always recommend highly similar or popular movies, providing users with broader choices.
