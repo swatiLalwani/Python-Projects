@@ -1,1 +1,49 @@
+Tools and techniques used
+Libraries Used:
+Pandas and NumPy for data manipulation.
+Matplotlib and Seaborn for visualizations.
+Scipy for statistical analysis (e.g., chi-squared test, Shapiro-Wilk test, Levene's test).
+
+Algorithms and Methods:
+Chi-Squared Test for checking the significance of relationships between categorical variables and revenue.
+Shapiro-Wilk Test for testing normality in data distribution.
+Levene’s Test for equality of variances in groups.
+
+The project appears to be an analysis of Netflix user data, focusing on understanding user demographics, device preferences, subscription types, and their relation to monthly revenue.
+
+Dataset Description:
+The dataset contains user information including:
+Subscription Type (Basic, Standard, Premium)
+Country
+Gender
+Device (Smartphone, Tablet, Smart TV, Laptop)
+Monthly Revenue
+Age
+The project reads this data and performs various analyses, cleaning steps like removing unwanted columns (e.g., user IDs) and checking for duplicates.
+
+Project Steps:
+Data Cleaning: Unnecessary columns like User ID and Plan Duration were dropped. Duplicate entries based on user IDs were checked.
+Descriptive Analysis: The project involves checking the basic statistical details of the data, such as distribution of subscription types, country-wise users, device usage, and revenue.
+Visualization: Various plots (count plots, pie charts, box plots) were used to visualize relationships and distributions of subscription types, gender, countries, devices, and monthly revenue.
+Univariate and Bivariate Analysis: The data was analyzed for each feature individually (e.g., subscription type, country) and also for the relationship between multiple variables, like age and monthly revenue or subscription type and monthly revenue.
+Statistical Tests: Chi-squared tests were conducted to check for significant relationships between categorical variables and monthly revenue. Other tests like Shapiro-Wilk and Levene's test were applied to check normality and variance equality in revenue distribution across groups.
+
+Key Insights:
+Subscription Types: The dataset shows a balanced number of users across subscription types, with slightly more users opting for Basic plans.
+Country Distribution: The majority of Netflix users are from the United States, Canada, and the UK, followed by other countries like Australia, Germany, and Brazil.
+Device Preferences: There is an equal distribution of users watching on Smartphones, Tablets, Smart TVs, and Laptops.
+Gender: There is a near-equal distribution of male and female users.
+Revenue: The majority of users contribute around $12 monthly in revenue, with slight variations in the data.
+
+Recommendations:
+Targeting Premium Users: Netflix could potentially focus on strategies to convert Basic users to Premium by offering additional perks or discounts.
+Country-Specific Campaigns: The analysis shows that the majority of users are from a few countries, so Netflix could develop targeted campaigns for smaller markets to increase growth.
+Device Experience Optimization: Since users are equally spread across devices, Netflix should ensure an equally high-quality experience across all devices.
+Revenue Segmentation: The analysis of revenue distributions could be used to personalize subscription recommendations or upsell higher-tier plans based on user preferences.
+
+Conclusions:
+The data suggests that Netflix has a well-balanced user base across gender, device types, and subscription levels. However, there is potential to further increase revenue by focusing on users contributing higher monthly amounts.
+Statistically significant relationships between various factors (such as country or subscription type) and monthly revenue were identified, indicating areas Netflix could explore for business strategies.
+
+
 
