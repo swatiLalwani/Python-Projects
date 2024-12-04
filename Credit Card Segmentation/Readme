@@ -1,1 +1,40 @@
+Tools and Techniques used:
+Programming Language: Python
+
+Libraries:
+Pandas and NumPy: Data manipulation and analysis.
+KMeans Clustering: A clustering algorithm for unsupervised learning.
+MinMaxScaler: For normalizing features.
+Matplotlib and Plotly: Data visualization (including 3D plotting).
+
+Project Overview:
+This project aims to segment credit card customers into different groups using unsupervised learning techniques. Customer segmentation helps financial institutions identify and tailor services to specific groups based on attributes such as gender, income category, and credit limit.
+
+Key Variables:
+Gender (Categorical): Mapped to ordinal values (M: 2, F: 1).
+Income Category (Categorical): Mapped to ordinal values, e.g., 'Less than $40K': 1, '$120K +': 5, etc.
+Credit Limit (Numerical): The credit limit of customers.
+
+Process and Key Steps:
+
+Data Cleaning:
+Checked for null values and dropped any rows with missing values in critical columns.
+Mapped categorical values (Gender and Income Category) to numerical values for clustering.
+
+Clustering:
+KMeans Clustering was applied to segment customers into 5 clusters based on their gender, income, and credit limit.
+The Credit_card_segments column was created to label the different clusters.
+
+Visualization:
+A 3D scatter plot was created using Matplotlib and Plotly to visualize the clusters based on the key variables: gender, income, and credit limit.
+The plot helped demonstrate how customers were distributed across different segments.
+
+Conclusion:
+The clustering model successfully segmented customers into five distinct groups based on their attributes, helping identify patterns such as:
+Groups with higher credit limits.
+Segments dominated by specific income brackets or gender distributions.
+
+Recommendation:
+These customer segments can be used by financial institutions to design personalized marketing strategies and credit card offers tailored to each group’s specific characteristics. Future improvements could involve incorporating more features such as customer spending behavior or geographical location for more accurate segmentation.
+
 
