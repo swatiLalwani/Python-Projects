@@ -1,0 +1,90 @@
+⚙️ Data Preparation & Automation: Web Scraping → Clean Dataset for BI/Modeling
+📌 Overview
+
+This project demonstrates data acquisition, preprocessing, and automation, transforming raw web or API data into clean datasets ready for analytics, dashboards, or machine learning.
+
+It includes:
+✅ Web scraping / API extraction
+✅ Data cleaning & standardization
+✅ Feature engineering
+✅ Automated pipeline for repeated runs
+
+🎯 Business Use Case
+
+Organizations often rely on external or unstructured data sources:
+
+Competitive pricing
+
+Customer reviews
+
+Financial market indicators
+
+Product catalogs
+
+News sentiment feeds
+
+This project shows how to automate data collection and turn raw data into analysis-ready tables.
+
+🔧 Methods & Tools
+
+Python: Requests, BeautifulSoup, Pandas
+
+Cleaning tasks:
+
+Removing duplicates
+
+Handling missing values
+
+Type conversion
+
+Normalizing text & numeric fields
+
+Scheduling automation via:
+
+Cron (Linux) / Task Scheduler
+
+Or custom Python scheduler loop
+
+✅ Example Code
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+url = "https://example.com/products"
+html = requests.get(url)
+soup = BeautifulSoup(html.text, "html.parser")
+
+products = []
+for item in soup.find_all("div", class_="product"):
+    name = item.find("h2").text
+    price = item.find("span", class_="price").text
+    products.append([name, price])
+
+df = pd.DataFrame(products, columns=["Product", "Price"])
+df.to_csv("clean_products.csv", index=False)
+
+✅ Business Impact
+
+✔ Saves analyst time through automation
+✔ Ensures fresh & accurate data for reporting
+✔ Enables dashboards with daily/weekly updated data
+✔ Eliminates manual data pulls and copy-paste reporting
+✔ Supports scalable BI pipelines
+
+📂 Files
+Data_Preparation_Automation/
+│
+├── WebScraping_Pipeline.ipynb
+├── Cleaned_Dataset.csv (optional sample)
+└── README.md
+
+🚀 Future Enhancements
+
+Connect to database (MySQL / Snowflake) for automated inserts
+
+Integrate with Power BI refresh workflow
+
+Add API version for real-time data pull
+
+Add logging + email alerts when new data loads
+
