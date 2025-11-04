@@ -1,0 +1,138 @@
+👥 Customer Analytics Portfolio: Segmentation, Sentiment, Churn & Recommendations
+📌 Overview
+
+This portfolio applies Python, Machine Learning, NLP, and Tableau to analyze customer behavior, understand satisfaction, predict churn, and personalize product experiences.
+It includes four business-critical use cases used in real organizations:
+
+✅ Customer Segmentation – Identify groups for targeted marketing & personalization
+✅ Sentiment Analysis – Understand customer feedback and satisfaction drivers
+✅ Churn Dashboard (Tableau) – Monitor and predict customer attrition
+✅ Product Recommendation System – Suggest relevant products to increase retention & revenue
+
+Together, these projects show how customer data can drive growth, engagement, and strategic decision-making.
+
+🎯 Business Objectives & Value
+Use Case	Business Goal	Business Impact
+Segmentation	Group customers by behavior and spending	Personalized campaigns, risk control, upsell opportunities
+Sentiment Analysis	Understand product feedback & pain points	Product improvement, targeted messaging, customer satisfaction
+Churn Dashboard (Tableau)	Track churn trends & at-risk segments	Reduce churn, improve retention, early intervention
+Recommendation Engine	Suggest relevant products to users	Higher order size, engagement, customer lifetime value
+✅ 1. Customer Segmentation (Python – K-Means)
+
+Cleaned and standardized transaction data
+
+Applied K-Means clustering to group customers by:
+✔ Spending amount
+✔ Credit utilization
+✔ Payment behavior
+✔ Income & balance
+
+Visualized segments using Seaborn & Matplotlib
+
+Key Insight:
+“High-spend, on-time payers” are ideal for loyalty rewards, while “high-utilization, late payers” need credit limit controls.
+
+Business Impact:
+
+Better risk management
+
+Improved campaign targeting
+
+Higher engagement from personalized offers
+
+✅ 2. Sentiment Analysis (NLP – Amazon Alexa Reviews)
+
+Tokenized & cleaned review text
+
+Applied TF-IDF and sentiment scoring
+
+Classified reviews into positive / neutral / negative
+
+Identified most common complaint & praise themes
+
+Key Insight:
+
+Positive sentiment driven by convenience & integration
+
+Negative sentiment focused on voice recognition reliability
+
+Business Impact:
+
+Feature improvement roadmap
+
+Reduced customer complaints
+
+Stronger product messaging
+
+✅ 3. Customer Churn Dashboard (Tableau)
+
+🔗 Live Dashboard:
+https://public.tableau.com/app/profile/swati.thakurbhai.lalwani/viz/CustomerChurnAnalysis_17340346188020/Dashboard1
+
+Dashboard Features
+
+Filters by customer segment, location, subscription tier
+
+Churn rate & retention KPIs
+
+Cohort retention analysis
+
+At-risk segment flagging
+
+Visual drilldowns into customer profiles
+
+Key Insights:
+
+“Low-engagement premium users” showed 22% higher churn
+
+First 90 days of usage strongly predict long-term retention
+
+Recommended onboarding campaign → projected 5% churn reduction
+
+Business Impact:
+
+Enables proactive retention strategy
+
+Helps marketing target at-risk users
+
+Supports forecasting & revenue protection
+
+✅ 4. Product Recommendation System
+
+Built using collaborative filtering & cosine similarity
+
+Suggests relevant products based on similarity and purchase patterns
+
+Example Code:
+
+from sklearn.metrics.pairwise import cosine_similarity
+
+similarity_matrix = cosine_similarity(pivot_table)
+recommended_items = np.argsort(similarity_matrix[item_id])[::-1][1:6]
+
+
+Business Impact:
+
+Increases basket value
+
+Improves personalization
+
+Enhances customer lifetime value
+
+🧠 Skills Demonstrated
+
+✔ K-Means Clustering
+✔ NLP & Sentiment Classification
+✔ Tableau Dashboard Design & KPI Reporting
+✔ Collaborative Filtering / Recommendation Logic
+✔ Data Cleaning & Feature Engineering
+✔ Business insight storytelling
+
+📂 Project Files
+Customer_Analytics/
+│
+├── Credit_Card_Segmentation.ipynb
+├── Sentiment_Analysis_Amazon_Alexa.ipynb
+├── Product_Recommendation_System.ipynb
+├── Churn_Dashboard (Tableau Public link)
+└── README.md
